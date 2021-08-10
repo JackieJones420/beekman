@@ -1,6 +1,7 @@
 {%- comment %}<locksmith:3ff2>{% endcomment -%}
   {%- include 'locksmith' -%}
 {%- comment %}</locksmith:3ff2>{% endcomment -%}
+
 <!doctype html>
 <html class="no-js supports-no-cookies" lang="{{ shop.locale }}">
 <head>
@@ -74,7 +75,7 @@
 
     {{ content_for_header }}
 {%- render 'bold-common' -%}
-    {% include 'globo-megamenu-script' %}
+    
 
 
     <!--begin-bc-sf-filter-css-->
@@ -90,8 +91,23 @@
     <!-- End of Littledata - Fix Google Analytics Script -->
 
 <script id="livescale-embed" src="https://diva.livescale.tv/shop/embedded-app/embedded-app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  {% include 'qikify-navigator' %}
+  {% include 'qikify-smartmenu' %}
+  <style>
+    /* globo custom */
+      @media(max-width:840px){
+        body .globomenu-responsive.globomenu-responsive-collapse{
+          overflow: hidden!important;
+          display: unset !important;
+          }
+      }
+    
+    a.globomenu-responsive-toggle-790 i.fa.fa-bars{
+      opacity:0 !important;
+      visibility:hidden !important;
+    }
+  </style>
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} d-flex flex-column">
@@ -224,3 +240,44 @@
 </script>
 <script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
 <!-- End Shopify-Afterpay JavaScript Snippet (v1.0.9) -->
+
+<script>
+  LimeSpot.ListenOnce(document, "lsRecommendationsLoaded", function() {
+    var productLinks = document.querySelectorAll(".ls-recommendation-box:not([data-box-type='Upsell']) .ls-link");
+    for (var i = 0; i < productLinks.length; i++) {
+      (function(i) {
+        var productLink = productLinks[ i ];
+        var href = productLink.href;
+        if (!href) return;
+        var handle = LimeSpot.Shopify.GetProductHandle(href);
+
+        jQuery.ajax({
+          dataType: "text",
+          url: "/products/" + handle + "?view=accentuate-product-label.json"
+        })
+          .done(function(label) {
+            if (label !== "") {
+              jQuery(productLink).addClass('with__label');
+              jQuery(productLink)
+                .append('<div class="product__label">' + label + '</div>');
+            } else {
+              return;
+            }
+          });
+      })(i);
+    }
+  });
+</script>
+
+{% include 'custom-style-for-menu' %}
+
+
+
+
+
+
+
+
+
+
+
