@@ -37,7 +37,7 @@
                         $('#counter-{{ article.id }}').countdown(
                             eventData.metafields.event_time.start_countdown_prepared
                         ).on('update.countdown', function (event) {
-                            $(this).html(event.strftime('<div class="t_wrap">%-d <div>day%!d</div></div> '
+                            $(this).html(event.strftime('<div class="t_wrap">%-w <div>week%!w</div></div><div class="t_wrap">%-d <div>day%!d</div></div> '
                                 + '<div class="t_wrap">%H <div>hours</div></div> '
                                 + '<div class="t_wrap">%M <div>minutes</div></div> '
                                 + '<div class="t_wrap">%S <div>seconds<div></div>'));
