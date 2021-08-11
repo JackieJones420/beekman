@@ -2,7 +2,7 @@
 {% comment %} Soldout {% endcomment %}
 {% assign sold_out = false %}
 {% assign sold_out_class = '' %}
-{% assign sold_out_text = section.settings.soldout_label %} 
+{% assign sold_out_text = section.settings.soldout_label %}
 {% unless product.available %}
 {% assign sold_out = true %}
 {% assign sold_out_class = 'sold-out' %}
@@ -11,7 +11,7 @@
 {% comment %} On Sale {% endcomment %}
 {% assign on_sale = false %}
 {% assign sale_class = '' %}
-{% assign sale_text = section.settings.sale_label %} 
+{% assign sale_text = section.settings.sale_label %}
 {% if sca_compare_at_price > sca_price %}
 {% assign on_sale = true %}
 {% assign sale_class =  'on-sale' %}
@@ -44,43 +44,6 @@
           {% endif %}
         </a>
       </div>
-
-      {% comment %} PRODUCT LABEL {% endcomment %}
-      {% if section.settings.show_sale_label or section.settings.show_sold_out_label %}
-      <div class="bc-sf-filter-product-item-label">
-        {% if sold_out and section.settings.show_sold_out_label %}
-        <span class="soldout bc-sf-filter-label">
-          {{ sold_out_text }}
-        </span>
-        {% endif %}
-        {% if on_sale and section.settings.show_sale_label %}
-        <span class="sale bc-sf-filter-label">
-          {{ sale_text }}
-        </span>
-        {% endif %}
-
-        {% comment %} LABEL EXTEND BY TAG: New, Best, Featured {% endcomment %}
-        {% assign showAll = false %}
-        {% if showAll %}
-          {% for tag in product.tags %}
-            {% if tag contains 'pfs:label-'%}
-              {% assign t = tag | split: 'pfs:label-' %}
-              <span class="bc-sf-filter-label tag {{ t }}">{{ t }}</span>
-            {% endif %}
-          {% endfor %}
-        {% else %}
-          {% assign productTags = product.tags | reverse %}
-          {% for tag in productTags %}
-            {% if tag contains 'pfs:label-'%}
-              {% assign t = tag | split: 'pfs:label-' %}
-              <span class="bc-sf-filter-label tag {{ t }}">{{ t }}</span>
-              {% break %}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      </div>
-      {% endif %}
-
     </div>
 
     <div class="bc-sf-filter-product-bottom">

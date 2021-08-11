@@ -323,8 +323,4 @@
     opacity: .75;
     color: black;
 }
-@media only screen {
-    .product_shop_info.col-12.col-lg-5{
-    margin-bottom:120px !important;
-    }
-    }
+

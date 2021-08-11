@@ -20,21 +20,6 @@
     - {% include 'responsive-image' with image: featured_image, image_class: "css-class", wrapper_class: "wrapper-css-class", max_width: 700, max_height: 800 %}
 {%- endcomment -%}
 
-
-<style>
-@media only screen and (min-width: 769px) {
-  .size-image-hero {
-    object-fit: contain !important;
-  }
-
-}
-
-@media only screen and (min-width: 1334px) {
-  .size-image-hero {
-    object-fit: cover !important;
-  }
-}
-</style>
 {%- comment -%} Added incremental number to avoid conflict styling code when the same images are using this snippet {%- endcomment -%}
 {%- capture responsive_image_counter %}{% increment responsive_image_counter %}{% endcapture -%}
 
@@ -95,10 +80,9 @@
 {%- endcapture -%}
 {%- assign image_widths = image_widths | strip -%}
 
-
 <div id="ImageWrapper-{{ image_class }}-{{ image.id }}-{{ responsive_image_counter }}" data-image-id="{{ image.id }}" class="responsive-image__wrapper {{ wrapper_class }}" {{ wrapper_attributes }}>
-  <img  id="Image-{{ image_class }}-{{ image.id }}-{{ responsive_image_counter }}"
-    class="responsive-aspect-ratio__image size-image-hero lazyload {{ image_class }}"
+  <img id="Image-{{ image_class }}-{{ image.id }}-{{ responsive_image_counter }}"
+    class="responsive-aspect-ratio__image lazyload {{ image_class }}"
     src="{{ image | img_url: '300x' }}"
     data-src="{{ img_url }}"
     data-widths="[{{ image_widths }}]"
@@ -111,5 +95,5 @@
 </div>
 
 <noscript>
-  <img  class="size-image-hero {{ image_class }}" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}">
+  <img class="{{ image_class }}" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}">
 </noscript>

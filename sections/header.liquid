@@ -97,27 +97,14 @@
           </a>
         </div>
         <div class="col-md-6 text-center d-md-block hide-mobile" id="megaMenu">
-          <div class="megamenu__wrap globomenu-custommenu">
-            <ul class="globomenu globomenu-main globomenu-horizontal globomenu-transition-shift globomenu-items-align-center globomenu-trigger-hover globomenu-responsive globomenu-responsive-collapse">
-              {% for link in linklists[section.settings.menu].links %}
-                {%- comment %}<locksmith:20ec>{% endcomment -%}
-                  {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}
-                {%- comment %}</locksmith:20ec>{% endcomment -%}
-                <li class="globomenu-item  globomenu-item-level-0 globomenu-item-has-children globomenu-has-submenu-drop globomenu-has-submenu-mega">
-                  <a href="{{ link.url }}" class="globomenu-target js-no-transition">
-                    <span class="globomenu-target-title globomenu-target-text">
-                      {{ link.title }}
-                    </span>
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
+        
+        
         </div>
         {% comment %} ==========  MOBILE NAVIGATION =========== {% endcomment %}
-        <div id="overlay"></div>
+        <div id="overlay" disabled></div>
+        
         <div class="mobile-menu" id="verticalMobileNav">
-            <ul id="first-level" class="list-unstyled first-level">
+                    <ul id="first-level" class="list-unstyled first-level">
               {% for link in linklists[section.settings.menu].links %}
                 {%- comment %}<locksmith:51c3>{% endcomment -%}
                   {%- capture var %}{% render 'locksmith-variables', scope: 'subject', subject: link, subject_parent: linklists[section.settings.menu], variable: 'transparent' %}{% endcapture %}{% if var == "true" %}{% else %}{% continue %}{% endif -%}

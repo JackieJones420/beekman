@@ -29,6 +29,11 @@
 
       <div class="col-6 col-md-3 product__wrap">
         <div class="img__wrap">
+          {% if product.metafields.accentuate.product_label != blank %}
+            <div class="product__label">
+              {{ product.metafields.accentuate.product_label }}
+            </div>
+          {% endif %}
           <a href="/products/{{ product.handle }}">
             {% for image in product.images %}
               {% if featured_image == image %}

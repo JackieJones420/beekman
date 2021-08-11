@@ -50,6 +50,7 @@
           "announcement_bar_apply_link": false,
           "announcement_bar_text": "Flat $5 Shipping On All Orders!",
           "announcement_link_text": "",
+          "announcement_bar_text_url": "",
           "announcement_link_color": "#4a5761",
           "announcement_bar_promo_code": "",
           "announcement_bar_link1_icon": "laptop",
@@ -61,7 +62,8 @@
           "logo": "shopify:\/\/shop_images\/Beekman1802-Stacked-450_89fcd212-e625-4e65-b57e-91b5691ed829.jpg",
           "logo_max_width": 250,
           "menu": "main-menu",
-          "promo_banner_text": ""
+          "promo_banner_text": "",
+          "promo_banner_url": ""
         }
       },
       "footer": {
@@ -80,24 +82,24 @@
         "type": "story",
         "settings": {
           "bkg_image": "shopify:\/\/shop_images\/homepage_background_UltaLaunch_60e8a40b-51ae-4a67-a2d0-9394ac300cac.jpg",
-          "icon": "shopify:\/\/shop_images\/ClinicallyKind_Icon-02.png",
+          "icon": "shopify:\/\/shop_images\/SHIELD_b4500589-d1ca-43e2-8a0c-6af6aa010ad6.png",
           "icon_tagline": "",
-          "title": "CLINICALLY KIND™ FOR SENSITIVE SKIN",
+          "title": "CLINICALLY KIND® FOR SENSITIVE SKIN",
           "text": "It's skincare that’s clinically tested, scientifically proven, and made for sensitive skin (and sensitive people).",
           "button_label": "SHOP NOW",
           "button_link": "shopify:\/\/collections\/skincare",
-          "image": "shopify:\/\/shop_images\/Face-997-editSE.jpg"
+          "image": "shopify:\/\/shop_images\/Artboard_1_b6e83c90-28de-4676-9807-64c0eabd9ca7.png"
         }
       },
       "1562188206538": {
         "type": "newsletter",
         "settings": {
-          "carousel_img_1_mobile": "shopify:\/\/shop_images\/slider1.jpg",
-          "carousel_img_2_mobile": "shopify:\/\/shop_images\/slide2.jpg",
-          "carousel_img_3_mobile": "shopify:\/\/shop_images\/slider3new.jpg",
-          "carousel_img_1_desktop": "shopify:\/\/shop_images\/subscribe_slider_Teal_Jackson-107.jpg",
-          "carousel_img_2_desktop": "shopify:\/\/shop_images\/subscribe_slider_Marina_and_Anna-56.jpg",
-          "carousel_img_3_desktop": "shopify:\/\/shop_images\/slidesr-Header-Desktop-3000x1337.jpg",
+          "carousel_img_1_mobile": "shopify:\/\/shop_images\/Beekman-9.jpg",
+          "carousel_img_2_mobile": "shopify:\/\/shop_images\/Beekman-Reshoot-3.jpg",
+          "carousel_img_3_mobile": "shopify:\/\/shop_images\/Beekman-Reshoot-2.jpg",
+          "carousel_img_1_desktop": "shopify:\/\/shop_images\/Subscribe_desktop_Beekman-9.jpg",
+          "carousel_img_2_desktop": "shopify:\/\/shop_images\/Subscribe_desktop_Beekman-Reshoot-3.jpg",
+          "carousel_img_3_desktop": "shopify:\/\/shop_images\/Subscribe_desktop_Beekman-Reshoot-2.jpg",
           "newsletter_title": "Cultivate Beautiful Skin With Us",
           "newsletter_content": "Be the first to hear about new products, events and exclusive content.",
           "newsletter_placeholder": "Your Email",
@@ -306,12 +308,12 @@
               "most-loved-title": "NEW! Clinically Kind PROBIOTIC SKINCARE",
               "product1": "bloom-cream-probiotic-moisturizer",
               "product2": "milk-drops-probiotic-ceramide-serum",
-              "product3": "buttermilk-cleansing-balm",
-              "product4": "milk-foam-bubble-mask",
-              "product5": "milk-probiotic-starter-kit",
+              "product3": "dream-booster-bakuchiol-beta-retinol-better-aging-serum",
+              "product4": "golden-booster-amla-berry-vitamin-c-brightening-serum",
+              "product5": "vitamin-c-and-retinol-brighten-and-resurface-bloom-kit",
               "product6": "depuffing-eye-serum",
               "product7": "milk-wash-jelly-cleanser",
-              "product8": "milk-mud-mask",
+              "product8": "milk-foam-bubble-mask",
               "btn_text": "Shop All",
               "url": "shopify:\/\/collections\/skincare"
             }
@@ -320,7 +322,7 @@
             "type": "benefit",
             "settings": {
               "closeup-image": "shopify:\/\/shop_images\/Face-1175-editSE_bfe1698d-89b8-4855-8c47-ed8cab406a30.jpg",
-              "benefit_heading": "CLINICALLY KIND FOR SENSITIVE SKIN",
+              "benefit_heading": "CLINICALLY KIND® FOR SENSITIVE SKIN",
               "benefit_title1": "BEYOND \"CLEAN\"",
               "benefit_text1": "Our clean skincare goes beyond labels and stamps of approvals (but we have those too). Our Kind formulas are allergy tested, cruelty-free and clinically proven to be safe for even the most sensitive skin.",
               "benefit_title2": "KIND INGREDIENTS",
@@ -348,14 +350,15 @@
               "items_centered": true,
               "title1": "Seasonal",
               "concern_image1": "shopify:\/\/shop_images\/Beekman_1802_shop_by-001.jpg",
-              "url1": "shopify:\/\/collections\/snow-forest",
+              "url1": "shopify:\/\/collections\/lavender",
               "title2": "Most Loved",
               "concern_image2": "shopify:\/\/shop_images\/mostloved.jpg",
               "url2": "shopify:\/\/collections\/pure-goat-milk",
               "title3": "All Scents",
               "concern_image3": "shopify:\/\/shop_images\/allscents.jpg",
               "url3": "shopify:\/\/collections\/bar-soaps",
-              "title4": ""
+              "title4": "",
+              "url4": ""
             }
           },
           "1562925968715": {
@@ -385,13 +388,13 @@
             "settings": {
               "most-loved-enabled": true,
               "most-loved-title": "Most Loved",
-              "product1": "pure-caddy-set",
-              "product2": "vanilla-bar-soap",
+              "product1": "pure-stick-of-butter",
+              "product2": "milk-stick-deodorant",
               "product3": "pure-bar-soap",
               "product4": "pure-body-cream",
-              "product5": "spring-blossom-body-cream",
+              "product5": "sunshine-bar-soap",
               "product6": "honey-oats-bar-soap",
-              "product7": "honey-orange-bar-soap",
+              "product7": "pure-cuticle-cream",
               "product8": "pure-cuticle-serum",
               "btn_text": "Shop All",
               "url": "shopify:\/\/collections\/bath-body"
@@ -484,12 +487,12 @@
           "1566576910383": {
             "type": "hero-main",
             "settings": {
-              "mobile_image": "shopify:\/\/shop_images\/Merc_Header_mobile_Rose_A_Twentyone-198-editSE.jpg",
-              "desktop_image": "shopify:\/\/shop_images\/Merc_Header_desktop_Rose_A_Twentyone-198-editSE.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Merc_header_mobile_Artisan_2021-193-editSE.jpg",
+              "desktop_image": "shopify:\/\/shop_images\/Merc_header_Desktop_Artisan_2021-193-editSE.jpg",
               "heroAspectRatio_mobile": "100",
-              "heroTitle": "A Rose by Any Other Name...",
-              "heroContent": "Each of our Schitt's Creek inspired Rose Apothecary candles is artisan-made, hand-poured in upstate New York from 100% soy wax. Light it up and be instantly transported to a small town where rose, jasmine, and neroli blossom bloom and the characters are even more colorful than the flowers. While supplies last.",
-              "button_link": "https:\/\/beekman1802.com\/collections\/rose-apothecary\/products\/rose-apothecary-large-candle",
+              "heroTitle": "Raindrop Soap Dish",
+              "heroContent": "This playful soap dish is expertly handblown by Bobby Sharp and organically shaped to spark joy with a simplicity that stands up to any bathroom or counter. Featuring a raindrop-shaped design with slightly raised edges and a hobnail base to perfectly fit your favorite 9oz Beekman 1802 bar soap",
+              "button_link": "https:\/\/beekman1802.com\/collections\/glass-blowers\/products\/raindrop-soap-dish",
               "button_label": "SHOP NOW",
               "show_merc_icon": true
             }
@@ -654,7 +657,7 @@
           "hero_desktop": "shopify:\/\/shop_images\/Founders_Baby_Goats-134_008f540c-2cec-4e87-8b31-dad5cdc3aa18.jpg",
           "hero_heading": "BEEKMAN 1802 LIVE GOAT CAM",
           "hero_text": "Watch Farmer John love and care for our 100 goats in real time, live from our farm in Sharon Springs, New York! John has spent the last decade on Beekman 1802 farm caring for our best milkers! Did you know that each new baby goat is named using the same first initial as their mama? Just like the Kardashians with Kris, Kylie, Kendall, Kim and Khloe– We’ve got Sue, Sarah, Sandy & Selena. <br> <br> Due to our rural location, we lose power more frequently than most homes. <br> Camera interruptions may happen from time to time.",
-          "livefeed_link": "https:\/\/video.nest.com\/embedded\/live\/sXP3cXVNK8?autoplay=1",
+          "livefeed_link": "https:\/\/video.nest.com\/embedded\/live\/83I6mj1iAU?autoplay=1",
           "video_heading": "Crafted with Kindness",
           "video_text": "In addition to our own goats at the Beekman 1802 farm, we source our goat milk from 25 privately US owned family farms, owned by multiple generations of farmers. <br> <br>These dairy goats are fed a balanced, vegetarian diet, which is full of nutrients, and free of antibiotics, hormones, animal by-products, and preservatives.   They eat alfalfa hay, as well as a blend of grains including oats, barley, and corn. In addition, the goats receive almond hulls for fiber, salt blocks for digestion, and vitamin and mineral supplements for overall well-being. They also have plenty of fresh water on demand at all times. <br><br> At the farms, the goats have plenty of room to roam around during the day to both the inside and outside areas. Shelters provide protection from the seasonal elements such as extreme heat, cold, or rain. <br><br> Goats are very social animals, so our farmer partners make sure to keep them together, and provide them plenty of open space.   It is important to note that these farms are regularly inspected by state and county agencies.",
           "video_button_label": "SHOP NOW",
@@ -1451,7 +1454,7 @@
               "desktop_image": "shopify:\/\/shop_images\/headerskincare.jpg",
               "heroAspectRatio_mobile": "100",
               "heroTitle": "BOOK YOUR FREE  VIRTUAL CONSULTATION",
-              "heroContent": "Have questions about your routine? Looking to love your skin again? Book your FREE 1-on-1 consultation with our skincare expert today.",
+              "heroContent": "Have questions about your routine? Looking to love your skin again? Book your FREE 1-on-1 consultation with our skincare experts today.",
               "button_link": "https:\/\/beekman-1802.appointlet.com",
               "button_label": "Book Now"
             }
@@ -1460,7 +1463,7 @@
             "type": "skincare-experts",
             "settings": {
               "skincare_experts_enabled": true,
-              "experts_ttl": "Meet Our Skincare Expert",
+              "experts_ttl": "Meet Our Skincare Experts",
               "experts_desc": ""
             }
           },
@@ -1568,7 +1571,7 @@
               "desktop_img": "shopify:\/\/shop_images\/groupshot-desktop.jpg",
               "mobile_img": "shopify:\/\/shop_images\/kind-to-skin-mobile.jpg",
               "section_ttl": "KIND TO SKIN",
-              "section_text": "<span id=\"skincare\">Clinically Kind For Sensitive Skin™ is the Beekman 1802 approach to skincare that’s clinically tested, scientifically proven, and made for sensitive skin (and sensitive people). Effective clean formulations that work with your skin, not against it.\n\n<br><br>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/ClinicallyKind_Icon-02_180x.png?v=1610380019\" alt=\"clinically kind badge\" style=\"width:100px;height:100px;\"><\/span>"
+              "section_text": "<span id=\"skincare\">Clinically Kind® For Sensitive Skin is the Beekman 1802 approach to skincare that’s clinically tested, scientifically proven, and made for sensitive skin (and sensitive people). Effective clean formulations that work with your skin, not against it.\n\n<br><br>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/ClinicallyKind_Icon-02_180x.png?v=1610380019\" alt=\"clinically kind badge\" style=\"width:100px;height:100px;\"><\/span>"
             }
           },
           "ebebfa9e-2f19-4ecd-aab6-d5fce415b334": {
@@ -1641,7 +1644,8 @@
         "settings": {
           "above_title": "",
           "main_title": "KIND TO COMMUNITY",
-          "link_text": ""
+          "link_text": "",
+          "link_url": ""
         }
       },
       "press-landing": {
@@ -1692,17 +1696,17 @@
       "1599228185470": {
         "type": "homepage-carousel",
         "blocks": {
-          "40234c9d-e722-407f-973a-ec21fd6f57a7": {
+          "48a0aa83-1ead-4986-abe2-e8d9553777e0": {
             "type": "carousel_slide",
             "settings": {
               "homegrown_slide_type": "image",
-              "mobile_image": "shopify:\/\/shop_images\/Homepage_header_mobile_Teal_Jackson-403-editAM_1.jpg",
-              "desktop_image": "shopify:\/\/shop_images\/975x650body.jpg",
-              "title": "BLOOM WITH PRIDE",
-              "text": "Healthy, blooming skin starts here with our travel-sized set of our probiotic skincare star products, plus a rainbow Goatie pin! 100% of profits will be going to the Ali Forney Center for homeless LGBTQ+ Youth.",
+              "mobile_image": "shopify:\/\/shop_images\/HOMEPAGE-MOBILE.jpg",
+              "desktop_image": "shopify:\/\/shop_images\/HOMEPAGE-DESKTOP.jpg",
+              "title": "Self-Kindness is Your Ultimate Superpower",
+              "text": "Power up your skin with our supercharged kit of bestselling skincare! This super set is proof that self-Kindness is your ultimate superpower. It features a complete, Clinically Kind® routine that loves you and your sensitive skin back.",
               "show_heading_text": false,
-              "button_label": "Shop Now",
-              "button_link": "https:\/\/beekman1802.com\/products\/bloom-with-pride-skincare-starter-kit",
+              "button_label": "Shop at Ulta.com",
+              "button_link": "https:\/\/www.ulta.com\/p\/self-kindness-skincare-kit-pimprod2026732",
               "text_color_mobile": "#4a5761",
               "text_color_desktop": "#4a5761",
               "youtube_video_url": "",
@@ -1710,17 +1714,17 @@
               "youtube_player_controls": "0"
             }
           },
-          "a378d9a1-44a8-4de4-92bf-7f9c0ebfff03": {
+          "b53f852f-1d0a-4895-9af3-6e31adb850a3": {
             "type": "carousel_slide",
             "settings": {
               "homegrown_slide_type": "image",
-              "mobile_image": "shopify:\/\/shop_images\/Homepage_Header_Mobile_CBD2021-398-editSE.jpg",
-              "desktop_image": "shopify:\/\/shop_images\/944x650skincare.jpg",
-              "title": "Our #1 Soap Made Better With CBD!",
-              "text": "You asked, we answered. Our #1 bestselling product of all time is now infused with a high dose of 100% naturally cultivated broad-spectrum CBD oil for a calming cleanse that's perfect for sensitive skin.",
+              "mobile_image": "shopify:\/\/shop_images\/Homepage_Header_Mobile_Body_Twentyone-1279-editSE.jpg",
+              "desktop_image": "shopify:\/\/shop_images\/Homepage_Header_Desktop_Body_Twentyone-1279-editSE.jpg",
+              "title": "New! Goat Milk Foot Balm",
+              "text": "Kick dry, cracked heels to the curb and walk away with smooth, baby soft feet with this potent blend of goat milk, AHA and BHA. It's a brand new way to exfoliate and soften rough, calloused feet and heels.",
               "show_heading_text": false,
               "button_label": "Shop Now",
-              "button_link": "https:\/\/calm.beekman1802.com\/collections\/cbd",
+              "button_link": "https:\/\/beekman1802.com\/products\/pure-goat-milk-foot-balm",
               "text_color_mobile": "#4a5761",
               "text_color_desktop": "#4a5761",
               "youtube_video_url": "",
@@ -1728,17 +1732,17 @@
               "youtube_player_controls": "0"
             }
           },
-          "b0f12fab-fb8e-4263-a82d-54bce7e00482": {
+          "ef7994bc-ed99-4221-a754-3aed32d68e87": {
             "type": "carousel_slide",
             "settings": {
               "homegrown_slide_type": "image",
-              "mobile_image": "shopify:\/\/shop_images\/Homepage_Header_Mobile_Boosters_Twentyone-270-editSE.jpg",
-              "desktop_image": "shopify:\/\/shop_images\/Homepage_Header_Desktop_Boosters_Twentyone-270-editSE.jpg",
-              "title": "Dream Booster is Back!",
-              "text": "Our Cult-Favorite Returns! Our special bakuchiol is plant-based and helps to smooth skin texture, diminish fine lines & wrinkles, and minimize pores. Gentle for daily use, safe for sensitive skin, and first-time retinol users. See why our Neighbors have been raving.",
+              "mobile_image": "shopify:\/\/shop_images\/Homepage_Header_mobile_Face_2021_2-329-editAM_1-min.jpg",
+              "desktop_image": "shopify:\/\/shop_images\/Homepage_Header_Desktop_Face_2021_2-329-editAM_1-min.jpg",
+              "title": "DEPUFF & REDUCE DARK CIRCLES WITH DEWY EYED",
+              "text": "Discover the first-ever goat milk eye serum, probiotic packed and caffeine-free. Our clinically proven formula provides a unique 360 approach to firm stubborn upper lid sagging, reduce puffiness and diminish the appearance of under-eye dark circles.",
               "show_heading_text": false,
               "button_label": "Shop Now",
-              "button_link": "shopify:\/\/products\/dream-booster-bakuchiol-beta-retinol-better-aging-serum",
+              "button_link": "shopify:\/\/products\/depuffing-eye-serum",
               "text_color_mobile": "#4a5761",
               "text_color_desktop": "#4a5761",
               "youtube_video_url": "",
@@ -1748,9 +1752,9 @@
           }
         },
         "block_order": [
-          "40234c9d-e722-407f-973a-ec21fd6f57a7",
-          "a378d9a1-44a8-4de4-92bf-7f9c0ebfff03",
-          "b0f12fab-fb8e-4263-a82d-54bce7e00482"
+          "48a0aa83-1ead-4986-abe2-e8d9553777e0",
+          "b53f852f-1d0a-4895-9af3-6e31adb850a3",
+          "ef7994bc-ed99-4221-a754-3aed32d68e87"
         ],
         "settings": {
           "show_arrows": false,
@@ -2147,6 +2151,90 @@
               "item_heading": "Wood Polish",
               "item_text": "Ingredients:\n<br><br>\nWater, glycerin (humidifier), polyethylene wax emulsion (mold release agent) incl. fatty acids and tall-oil compounds with morpholine (emulsifier), carnauba wax emulsion (glossing agent), acrylic copolymer (thickener), triethanolamine (pH buffer), phenoxyethanol (preservative)\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/1_Beekman_Wood_Polish_V2_Plesh_SDS.pdf?v=1611776734\" target=\"_blank\">Safety Data Sheet<\/a>"
             }
+          },
+          "72bcda86-fad9-4747-8f04-24045c4b5164": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Granite and Stone Cleaner",
+              "item_text": "HSN #768240\n<br><br>\nIngredients:\n<br><br>\nWater (CAS# 7732-88-15), polyoxyethylene sorbitan monolaurate (CAS# 9005-64-5; solubilizer), C9-11 ethoxylated alcohols (CAS# 68439-46-3; detergent), C12-16 alkyl dimethyl benzyl ammonium chlorides (CAS# 68424-85-1; detergent, preservative), ethanol (CAS# 64-17-5; solvent), sodium metasilicate (CAS# 6834-92-0; emusilfier, suspension agent), disodium ethylenediaminetetraacetate dihydrate (CAS# 6381-92-6; chelating agent), fragrance (CAS# Trade Secret), alpha iso methyl ionone (CAS# 127-51-5; fragrance ingredient), benzyl salicylate (CAS# 118-58-1; fragrance ingredient), hexyl cinnamal (CAS# 101-86-0; fragrance ingredient)\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/SDS_Granite_and_Stone_Cleaner_Plesh.pdf?v=1623931460\" target=\"_blank\">Safety Data Sheet<\/a>"
+            }
+          },
+          "c285b80d-e30a-46d1-86ba-3874fc89b4c0": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Stainless Steel Cleaner & Polish",
+              "item_text": "<br><br>\nIngredients:\n<br><br>\nWater (CAS# 7732-18-5), proprietary non-ionic surfactant (CAS# Trade Secret, see https:\/\/www.stepan.com\/products-markets\/product\/BIOSOFTLFS07.html; detergent, degreasing), sodium C14-16 alpha olefin sulfonate (CAS# 68439-57-6; foaming, detergent), methyl soyate (CAS# 67784-80-9; degreasing, protective filming), polyoxyethylene sorbitan monolaurate (CAS# 9005-64-5; solubilizer), lactic acid (CAS# 50-21-5; descaling agent), phenoxyethanol (CAS# 122-99-6, preservative), fragrance, alpha iso methyl ionone (CAS# 127-51-5; fragrance ingredient), benzyl salicylate \n(CAS# 118-58-1; fragrance ingredient), hexyl cinnamal (CAS# 101-86-0; fragrance ingredient)\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/SDS_Stainless_Steel_Cleaner_and_Polish_Plesh.pdf?v=1623931763\" target=\"_blank\">Safety Data Sheet<\/a>"
+            }
+          },
+          "1b3c6bf1-b04a-40c6-971c-ca1ee4e70ccd": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Oxygen Brightener Formula",
+              "item_text": "Ingredients:\n<br><br>\nSodium Bicarbonate, Sodium Carbonate Peroxide, sodium sulfate, C12- 15 Alcohols Ethoxylated,\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/Happy_Place_Oxygen_Brightener_SDS.png?v=1624287857\">Safety Data Sheet<\/a>"
+            }
+          },
+          "93fe2227-cbad-476e-b855-b5e923997335": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Concentrated Cleaning Paste: Sweet Grass",
+              "item_text": "Ingredients:\n<br><br>\nPotassium Hydroxide, Glycerin, Oleic Acid, Water, Sodium Bicarbonate, Sodium Carbonate, Methylchloroisothiazolinone, Methylisothiazolinone, Magnesium Chloride, Magnesium Nitrate, Fragrance\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/HP_Concentrated_Cleaning_Paste_SDS_-_Sweet_Grass_Scent_1.png?v=1624288172\">Safety Data Sheet<\/a>"
+            }
+          },
+          "a1fc5bb6-6846-4e33-a369-80395c286b4e": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Concentrated Cleaning Paste: Citrus",
+              "item_text": "Ingredients:\n<br><br>\nPotassium Hydroxide, Glycerin, Oleic Acid, Water, Sodium Bicarbonate, Sodium Carbonate, Methylchloroisothiazolinone, Methylisothiazolinone, Magnesium Chloride, Magnesium Nitrate, Fragrance. Contains fragrance allergens\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/HP_Concentrated_Cleaning_Paste_SDS_-_Citrus_2.png?v=1624288299\">Safety Data Sheet<\/a>"
+            }
+          },
+          "cb5c5e0b-7d7b-4bc2-964e-ea1cbd54e393": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Concentrated Cleaning Paste: Lavender",
+              "item_text": "Ingredients:\n<br><br>\nPotassium Hydroxide, Glycerin, Oleic Acid, Water, Sodium Bicarbonate, Sodium Carbonate, Methylchloroisothiazolinone, Methylisothiazolinone, Magnesium Chloride, Magnesium Nitrate, Fragrance. Contains fragrance allergens\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/HP_Concentrated_Cleaning_Paste_SDS_-_Lavender_3.png?v=1624288406\">Safety Data Sheet<\/a>"
+            }
+          },
+          "30a269a4-7f6f-40d6-adef-af5cc1669ee8": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Laundry Soap: Sweet Grass",
+              "item_text": "Ingredients:\n<br><br>\nPalm Oil, Glycerin, Water, Sodium Hydroxide, Polypropylene glycol, Goat's Milk, Sorbitan Oleate, Hydrolyzed Oat Protein, Sodium Chloride, Sodium Bicarbonate, Sodium Carbonate, Sodium Borate, Sodium Metasilicate, Fragrance. Contains fragrance allergens.\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/HP_GOAT_S_MILK_LAUNDRY_SOAP_Sweet_Grass_SDS-_USA.png?v=1624380215\">Safety Data Sheet<\/a>"
+            }
+          },
+          "70df55a4-1536-4c1a-8505-46299c9fb715": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Laundry Soap: Citrus",
+              "item_text": "Ingredients:\n<br><br>\nPalm Oil, Glycerin, Water, Sodium Hydroxide, Polypropylene glycol, Goat's milk, Sorbitan Oleate, Hydrolyzed Oat Protein, Sodium Chloride, Sodium Bicarbonate, Sodium Carbonate, Sodium Borate, Sodium Metasilicate, d-Limonene, BHT, Dodecanol, Fragrance. Contains fragrance allergens.\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/HP_Laundry_Soap_-_Citrus_Scent_SDS.png?v=1624380031\">Safety Data Sheet<\/a>"
+            }
+          },
+          "6297de32-8151-49a5-a1c7-9c55deb72043": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Laundry Soap: Lavender",
+              "item_text": "Ingredients:\n<br><br>\nPalm Oil, Glycerin, Water, Sodium Hydroxide, Polypropylene glycol, Goat's milk, Sorbitan Oleate, Hydrolyzed Oat Protein, Sodium Chloride, Sodium Bicarbonate, Sodium Carbonate, Sodium Borate, Sodium Metasilicate, d-Limonene, Fragrance. Contains fragrance allergens.\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/HP_Laundry_Soap_Lavender_SDS.png?v=1624379927\">Safety Data Sheet<\/a>"
+            }
+          },
+          "897d30bc-c9a0-4bdd-9755-3471467c386b": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Laundry Soap: Pure",
+              "item_text": "Ingredients:\n<br><br>\nPalm Oil, Glycerin, Water, Sodium Hydroxide, Polypropylene glycol, Goat's Milk, Sorbitan Oleate, Hydrolyzed Oat Protein, Sodium Chloride, Sodium Bicarbonate, Sodium Carbonate, Sodium Borate, Sodium Metasilicate.\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/HP_GOATS_MILK_LAUNDRY_SOAP_Pure_SDS.png?v=1624380103\">Safety Data Sheet<\/a>"
+            }
+          },
+          "294bd03f-c1ed-44df-8691-7a6808ec8154": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Wrinkle Release: Pure",
+              "item_text": "Ingredients:\n<br><br>\nWater, Dioleoylethyl hydroxyethylammonium methosulfate, Isopropanol, Methylchloroisothiazolinone, Methylisothiazolinone, Magnesium Chloride, Magnesium Nitrate\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/Wrinkle_Release_SDS_-_USA.png?v=1624468469\">Safety Data Sheet<\/a>"
+            }
+          },
+          "91aadea4-6a2b-4bc1-be5d-58597711148c": {
+            "type": "tabbed_content",
+            "settings": {
+              "item_heading": "Wrinkle Release: Sweet Grass",
+              "item_text": "Ingredients:\n<br><br>\nWater, Dioleoylethyl hydroxyethylammonium methosulfate, Isopropanol, Methylchloroisothiazolinone, Methylisothiazolinone, Magnesium Chloride, Magnesium Nitrate, Fragrance. Contains fragrance allergens.\n<br><br>\n<a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0223\/7461\/files\/Wrinkle_Release_SDS_-_USA.png?v=1624468469\">Safety Data Sheet<\/a>"
+            }
           }
         },
         "block_order": [
@@ -2157,7 +2245,19 @@
           "db6938c5-5bba-445a-93ac-0d9df26635a4",
           "98a562ff-2bbd-4a5b-b661-5ef55974c92c",
           "c53d500e-f9f5-41c8-b3c9-ac1b74a56393",
-          "81a45a28-a15a-422d-bedb-a66626f21590"
+          "81a45a28-a15a-422d-bedb-a66626f21590",
+          "72bcda86-fad9-4747-8f04-24045c4b5164",
+          "c285b80d-e30a-46d1-86ba-3874fc89b4c0",
+          "1b3c6bf1-b04a-40c6-971c-ca1ee4e70ccd",
+          "93fe2227-cbad-476e-b855-b5e923997335",
+          "a1fc5bb6-6846-4e33-a369-80395c286b4e",
+          "cb5c5e0b-7d7b-4bc2-964e-ea1cbd54e393",
+          "30a269a4-7f6f-40d6-adef-af5cc1669ee8",
+          "70df55a4-1536-4c1a-8505-46299c9fb715",
+          "6297de32-8151-49a5-a1c7-9c55deb72043",
+          "897d30bc-c9a0-4bdd-9755-3471467c386b",
+          "294bd03f-c1ed-44df-8691-7a6808ec8154",
+          "91aadea4-6a2b-4bc1-be5d-58597711148c"
         ],
         "settings": {
           "hero": "shopify:\/\/shop_images\/e7ca3b1de000bc4e1ca54ef5ba3705c1.jpg",
@@ -2217,8 +2317,8 @@
           "c7c31368-982e-4ece-9317-4e2e729d1dbb": {
             "type": "clinically-certified",
             "settings": {
-              "certified_image": "shopify:\/\/shop_images\/Clinically-Kind-Shield-Large.png",
-              "certified_text": "<p>Clinically Kind™ is the Beekman 1802 approach to skincare that’s clinically tested, scientifically proven, and made for sensitive skin (and sensitive people). Effective clean formulations that work with your skin, not against it.<\/p>",
+              "certified_image": "shopify:\/\/shop_images\/SHIELD_b4500589-d1ca-43e2-8a0c-6af6aa010ad6.png",
+              "certified_text": "<p>Clinically Kind® is the Beekman 1802 approach to skincare that’s clinically tested, scientifically proven, and made for sensitive skin (and sensitive people). Effective clean formulations that work with your skin, not against it.<\/p>",
               "certified_text_color": "#4a5761"
             }
           },
@@ -2238,24 +2338,24 @@
               "title_desc": "Click below to learn more about our 3 Codes of Clinically-Kind for Sensitive Skin",
               "title_section1": "Beyond Clean",
               "left_image_section1": "shopify:\/\/shop_images\/Free-Of.png",
-              "main_text_section1": "<p>Clinically Kind™ products are free of toxins and the harsh ingredients known to irritate sensitive skin. But you don’t have to take our word for it. Our formulations meet the clean beauty standards of every major retailer and have received numerous third-party certifications. They’ve also undergone rigorous clinical testing to ensure that they’re highly effective and safe for sensitive skin—the best of both worlds.<\/p>",
+              "main_text_section1": "<p>Clinically Kind® products are free of toxins and the harsh ingredients known to irritate sensitive skin. But you don’t have to take our word for it. Our formulations meet the clean beauty standards of every major retailer and have received numerous third-party certifications. They’ve also undergone rigorous clinical testing to ensure that they’re highly effective and safe for sensitive skin—the best of both worlds.<\/p>",
               "bottom_image_section1": "shopify:\/\/shop_images\/certifications.png",
               "title_desc1_section1": "Here’s what you won’t find in any Clinically Kind formula:",
               "text_desc1_section1": "<p>parabens, sulfates, phthalates, synthetic colors and fragrances, abrasive exfoliant particles or microplastics, and severe actives like retinol and benzoyl peroxide.<\/p>",
               "title_desc2_section1": "HERE’S WHY IT MATTERS:",
               "text_desc2_section1": "<p>Such ingredients do more than trigger allergic reactions; they also strip skin of its natural defenses and disrupt the balance of the microbiome, causing an ongoing cycle of damage.<\/p>",
               "title_desc3_section1": "HERE’S THE PROOF:",
-              "text_desc3_section1": "<p>The proof is in the results of our 8-week scientific and consumer trials, which yielded ZERO allergic reactions or sensitivity flareups—and real results. Nearly all (90% or more) participants reported that their skin was softer, smoother, healthier, and more radiant after using a Clinically Kind™ product.<\/p>",
+              "text_desc3_section1": "<p>The proof is in the results of our 8-week scientific and consumer trials, which yielded ZERO allergic reactions or sensitivity flareups—and real results. Nearly all (90% or more) participants reported that their skin was softer, smoother, healthier, and more radiant after using a Clinically Kind® product.<\/p>",
               "title_section2": "Kind Ingredients",
               "left_image_section2": "shopify:\/\/shop_images\/bloom-cream.jpg",
-              "main_text_section2": "<p>Instead of quick chemical fixes that can compromise sensitive complexions, our Clinically Kind™ line relies on nourishing goat milk and active probiotic cultures to ensure skin’s long-term health and a balanced microbiome. Think of our gentle formulas as yogurt for your skin.<\/p>",
+              "main_text_section2": "<p>Instead of quick chemical fixes that can compromise sensitive complexions, our Clinically Kind® line relies on nourishing goat milk and probiotic extracts to ensure skin’s long-term health and a balanced microbiome. Think of our gentle formulas as yogurt for your skin.<\/p>",
               "bottom_image_section2": "shopify:\/\/shop_images\/microbiome.png",
-              "title_desc1_section2": "Probiotics For Skin",
-              "text_desc1_section2": "<p>Though most people have heard that probiotics promote gut health, few are aware that these “good bacteria” benefit skin, too—by restoring the natural microbiome which serves as skin’s first defense against external irritants, and also encourages collagen synthesis and cell turnover.<\/p>",
+              "title_desc1_section2": "Probiotic Extracts For Skin",
+              "text_desc1_section2": "<p>Though most people have heard that probiotics promote gut health, few are aware that probiotic extracts benefit skin, too—our probiotic extracts assist the natural microbiome which serves as skin’s first defense against external irritants, and also encourages collagen synthesis and cell turnover.<\/p>",
               "title_desc2_section2": "Certified Microbiome-Friendly",
               "text_desc2_section2": "<p>Our Bloom Cream Moisturizer, Milk Drops Ceramide Serum, Dewy Eyed Depuffing Eye Serum, and Pure Face Wipes are the ONLY products at Ulta—of more than 25,000 products by 500-plus brands—to be certified “microbiome friendly” by MyMicrobiomeAG.<\/p>",
               "title_desc3_section2": "Goat Milk Difference",
-              "text_desc3_section2": "<p>The ideal delivery system for these microbiome-balancing probiotics? Goat milk, of course. Beekman 1802’s signature ingredient has the same pH as human skin and is also high in lactic acid, a gentle exfoliator that prepares pores to receive the microbiome-balancing benefits of probiotics.<\/p>",
+              "text_desc3_section2": "<p>The ideal delivery system for these microbiome-balancing probiotic extracts? Goat milk, of course. Beekman 1802’s signature ingredient has the same pH as human skin and is also high in lactic acid, a gentle exfoliator that prepares pores to receive the microbiome-balancing benefits of probiotic extracts.<\/p><p><\/p><p>**Our products do not contain live probiotic cultures. Our formulas always contain preservatives so that it is shelf stable, safe for use, and do not need to be refrigerated!<\/p>",
               "title_section3": "SKINCARE SIMPLIFIED",
               "left_image_section3": "shopify:\/\/shop_images\/3-Simple-Steps.jpg",
               "main_text_section3": "<p>Sensitive skin is complicated enough. Your skincare routine shouldn’t require a medicine cabinet’s worth of products or a user manual. In fact, doing too much can work against you, by disrupting the skin’s natural microbiome. Our Clinically Kind system relies on only three must-have products—plus a few optional extras.<\/p>",
@@ -2273,7 +2373,7 @@
             "settings": {
               "desktop_hero_image": "shopify:\/\/shop_images\/clinically-kind-collectiton-desktop.jpg",
               "mobile_hero_image": "shopify:\/\/shop_images\/clinically-kind-collection-mobile.jpg",
-              "hero_heading": "Clinically Kind™ Skincare For Sensitive Skin",
+              "hero_heading": "Clinically Kind® Skincare For Sensitive Skin",
               "hero_heading_color": "#4a5761",
               "button_link": "shopify:\/\/collections\/clinically-kind-skincare",
               "button_label": "Shop Now"
@@ -2333,7 +2433,7 @@
             "type": "kindnessgrant-ripple",
             "settings": {
               "sectionHeading": "Thank You For Your Submission!",
-              "effectNote": "Your act of kindness could effect:"
+              "effectNote": "Your act of kindness could affect:"
             }
           },
           "589a0c8a-a30a-41e6-ae43-d8158e490b38": {

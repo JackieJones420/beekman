@@ -57,6 +57,11 @@
     <div class="bc-sf-filter-product-item-inner">
 
         <div class="bc-sf-filter-product-item-image img__wrap">
+          {% if product.metafields.accentuate.product_label != blank %}
+            <div class="product__label">
+              {{ product.metafields.accentuate.product_label }}
+            </div>
+          {% endif %}
           <a href="{{ product.url | within: collection }}" class="bc-sf-filter-product-item-image-link">
               <div class="responsive-image__wrapper">
                 <img src="{{ img_url }}" class="responsive-image__image bc-sf-filter-product-item-main-image" alt="{{ product.featured_image.alt | escape }}" />
@@ -67,42 +72,6 @@
           </a>
           <a href="{{ product.url | within: collection }}" class="view__details">View Details</a>
         </div>
-
-        {% comment %} PRODUCT LABEL {% endcomment %}
-        {% if section.settings.show_sale_label or section.settings.show_sold_out_label %}
-        <div class="bc-sf-filter-product-item-label">
-          {% if sold_out and section.settings.show_sold_out_label %}
-          <span class="soldout bc-sf-filter-label">
-            {{ sold_out_text }}
-          </span>
-          {% endif %}
-          {% if on_sale and section.settings.show_sale_label %}
-          <span class="sale bc-sf-filter-label">
-            {{ sale_text }}
-          </span>
-          {% endif %}
-
-          {% comment %} LABEL EXTEND BY TAG: New, Best, Featured {% endcomment %}
-          {% assign showAll = false %}
-          {% if showAll %}
-            {% for tag in product.tags %}
-              {% if tag contains 'pfs:label-'%}
-                {% assign t = tag | split: 'pfs:label-' %}
-                <span class="bc-sf-filter-label tag {{ t }}">{{ t }}</span>
-              {% endif %}
-            {% endfor %}
-          {% else %}
-            {% assign productTags = product.tags | reverse %}
-            {% for tag in productTags %}
-              {% if tag contains 'pfs:label-'%}
-                {% assign t = tag | split: 'pfs:label-' %}
-                <span class="bc-sf-filter-label tag {{ t }}">{{ t }}</span>
-                {% break %}
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        </div>
-        {% endif %}
 
         <div class="bc-sf-filter-product-bottom">
           <a href="{{ product.url | within: collection }}" class="bc-sf-filter-product-item-title product__name">{{ product.metafields.accentuate.custom_name | default: product.title }}</a>

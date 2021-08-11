@@ -21,7 +21,7 @@ BCSfFilter.prototype.afterGetFilterData = (function (_afterGetFilterData, $) {
     });
 
     $.get((url + productIds.join(',')), {
-      accentuate: ['short_description', 'custom_name', 'is_subscription_product']
+      accentuate: ['short_description', 'custom_name', 'is_subscription_product', 'product_label']
     }).then($.proxy(function (result) { this.__storedData = result; }, this))
       .then(Function.apply.bind(_afterGetFilterData, this, arguments))
       .fail(Function.apply.bind(_afterGetFilterData, this, arguments));
@@ -32,20 +32,17 @@ BCSfFilter.prototype.afterGetFilterData = (function (_afterGetFilterData, $) {
 var bcSfFilterTemplate = {
   'soldOutClass': ' sold-out',
   'saleClass': ' on-sale',
-  'soldOutLabelHtml': '<span class="soldout bc-sf-filter-label">' + bcSfFilterConfig.label_basic.sold_out + '</span>',
-  'saleLabelHtml': '<span class="sale bc-sf-filter-label">' + bcSfFilterConfig.label_basic.sale + '</span>',
-  'tagLabelHtml': '<span class="tag bc-sf-filter-label {{labelTag}}" >{{labelTag}}</span>',
   'vendorHtml': '<p class="bc-sf-filter-product-item-vendor">{{itemVendorLabel}}</p>',
   // Grid Template
   'productGridItemHtml': '<div data-section-type="product" class="product__wrap {{gridWidthClass}}{{soldOutClass}}{{saleClass}} {{itemActiveSwapClass}}">' + //bc-sf-filter-product-item bc-sf-filter-product-item-grid
     '<script class="bc-sf-filter-product-script" data-id="bc-product-json-{{itemId}}" type="application/json">{{itemJson}}</script>' +
     '<div class="bc-sf-filter-product-item-inner">' +
     '<div class="bc-sf-filter-product-item-image img__wrap">' +
+    '{{productLabel}}' +
     '<a href="{{itemUrl}}" class="bc-sf-filter-product-item-image-link"><div class="responsive-image__wrapper">{{itemImages}}</div></a>' +
     '<a href="{{itemUrl}}" class="view__details">View Details</a>' +
     '<div class="variant__count">{{variantsCount}}</div> ' +
     '</div>' +
-    //'<div class="bc-sf-filter-product-item-label">{{itemLabels}}{{itemTagLabels}}</div>' +
     '<div class="bc-sf-filter-product-bottom product__name">' +
     '<a href="{{itemUrl}}" class="bc-sf-filter-product-item-title product__name">{{itemTitle}}</a>' + // Or metafield!
     '<div class="short__desc">{{short_description}}</div>' + // product.metafields.accentuate.short_description
@@ -149,10 +146,6 @@ BCSfFilter.prototype.buildProductGridItem = function (data, index) {
   itemHtml = itemHtml.replace(/{{saleClass}}/g, saleClass);
   // Add Grid Width class
   itemHtml = itemHtml.replace(/{{gridWidthClass}}/g, buildGridWidthClass());
-  // Add Label
-  itemHtml = itemHtml.replace(/{{itemLabels}}/g, buildLabels(data));
-  // Add TAG Label
-  itemHtml = itemHtml.replace(/{{itemTagLabels}}/g, buildTagLabels(data, false));
   // Add Images
   itemHtml = itemHtml.replace(/{{itemImages}}/g, buildImages(data));
   // Add Price
@@ -187,6 +180,7 @@ BCSfFilter.prototype.buildProductGridItem = function (data, index) {
   // Add main attribute (Always put at the end of this function)
   itemHtml = itemHtml.replace(/{{itemId}}/g, data.id);
   itemHtml = itemHtml.replace(/{{itemTitle}}/g, customData.custom_name ? customData.custom_name : data.title);
+  itemHtml = itemHtml.replace(/{{productLabel}}/g, customData.product_label ? '<div class="product__label">'+customData.product_label+'</div>' : '');
   itemHtml = itemHtml.replace(/{{itemHandle}}/g, data.handle);
   itemHtml = itemHtml.replace(/{{variantInputs}}/g, buildVariantInputs(data));
   itemHtml = itemHtml.replace(/{{qtyInput}}/g, buildQtyInput(data));
@@ -344,48 +338,6 @@ function buildPrice(data) {
   return html;
 }
 
-function buildLabels(data) {
-  // Build Sold out label
-  var soldOutLabel = '';
-  if (bcSfFilterConfig.custom.show_sold_out_label && soldOut) {
-    soldOutLabel = bcSfFilterTemplate.soldOutLabelHtml.replace(/{{style}}/g, '');
-  }
-  // Build Sale label
-  var saleLabel = '';
-  if (bcSfFilterConfig.custom.show_sale_label && onSale && !soldOut) {
-    saleLabel = bcSfFilterTemplate.saleLabelHtml.replace(/{{style}}/g, '');
-  }
-  // Build Labels
-  return soldOutLabel + saleLabel;
-}
-// BUILD LABEL PRODUCT WITH TAGS
-function buildTagLabels(data, showall) {
-  if (showall) {
-    var tagLabel = '';
-    if (data.tags) {
-      for (var i = 0; i < data.tags.length; i++) {
-        var tag = data.tags[i];
-        if (tag.indexOf("pfs:label") !== -1) {
-          var preTagLabel = bcSfFilterTemplate.tagLabelHtml.replace(/{{labelTag}}/g, tag.split('pfs:label-')[1]);
-          tagLabel += preTagLabel;
-        }
-      }
-    }
-  } else {
-    var tagLabel = '';
-    if (data.tags) {
-      for (var i = data.tags.length - 1; i >= 0; i--) {
-        var tag = data.tags[i];
-        if (tag.indexOf("pfs:label") !== -1) {
-          var preTagLabel = bcSfFilterTemplate.tagLabelHtml.replace(/{{labelTag}}/g, tag.split('pfs:label-')[1]);
-          tagLabel += preTagLabel;
-          break;
-        }
-      }
-    }
-  }
-  return tagLabel;
-}
 /************************** END BUILD PRODUCT ITEM ELEMENTS **************************/
 /************************** BUILD TOOLBAR **************************/
 // Build Pagination

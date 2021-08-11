@@ -1,15 +1,13 @@
 <script type="text/javascript">
     var ___PRIVATE_APP_URL = {{ settings.private_app_url | json }};
 </script>
-{% assign article = shop.metafields.accentuate.featured_event %}
+{% assign article = blog.metafields.accentuate.featured_event %}
 {% assign artObject = articles[article] %}
-
-<style>
+<style> 
   html, body {
-    height: auto;
+    height: auto; 
   }
 </style>
-
 
 {% include 'featured-event-hero' with article: artObject %}
 
@@ -30,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div class="filter__wrap">
+          <div class="filter__wrap"> 
             <div class="f__ttl">
               Filter By Type
             </div>
@@ -59,6 +57,7 @@
     </div>
   </div>
 </div>
+
 <script type="text/x-template" id="blog__content-item-template">
   <li class="event_item">
     <div class="time_wrap">
@@ -74,6 +73,7 @@
       <div class="desc">{--event_content--}</div>
     </div>
   </li>
+  
 </script>
 <script type="text/x-template" id="blog__content-template">
   <div id="eventsList">
@@ -148,10 +148,9 @@
             }(i))
         }
 
-        var url = ___PRIVATE_APP_URL + 'events';
-
-        function fetchByDate($date, params, $manipulateFunc, isFirstLoad) {
-          
+        // var url = ___PRIVATE_APP_URL + 'events';
+      	var url =  ___PRIVATE_APP_URL + 'events?articleId=' + {{ artObject.id }};
+          function fetchByDate($date, params, $manipulateFunc, isFirstLoad) {
             var urlToSend = url;
             params = params || {};
             isFirstLoad = isFirstLoad || false;
@@ -161,11 +160,11 @@
             params['firstLoad'] = isFirstLoad;
             $manipulateFunc = $manipulateFunc || 'html';
             var errors = $('#filter__error');
-         
-            $.get(urlToSend, params).done(function (data) {
+            console.log("url to send ");
+                        console.log(urlToSend);
+            $.get(urlToSend).done(function (data) {
                 // No need to do anything except remove load more button!
                 if($.isArray(data) && !data.length) {
-                
                     $('#events__loadMore').hide();
                     if ($manipulateFunc == 'html') {
                         $('#blog__content')[$manipulateFunc]('');
@@ -173,7 +172,6 @@
                     }
                     return;
                 }
-             
                 errors.empty();
                 $('#blog__content')[$manipulateFunc]('');
 
@@ -182,9 +180,8 @@
                 var sortedData = {};
                 var monthes = ["January","February","March","April","May","June","July","August","September","October","November","December"];
                 $.each(data, function (id, inner) {
-                  var month = new Date(inner.metafields.accentuate.featured_event_start_time * 1000).getMonth();
+                    var month = new Date(inner.metafields.event_time.start_timestamp * 1000).getMonth();
                     month = monthes[month];
-                   
                     if(typeof sortedData[month] === "undefined") {
                         sortedData[month] = {};
                     }
@@ -201,7 +198,7 @@
                         var itemContent = $('#blog__content-item-template').html();
 
                         var metafields = inner.metafields,
-                            date = new Date(inner.metafields.accentuate.featured_event_start_time * 1000);
+                            date = new Date(metafields.event_time.start_timestamp * 1000);
 
                         if (inner.metafields && inner.metafields.accentuate && inner.metafields.accentuate.event_type) {
                             if (!$('#event___filter').find('[value="' + inner.metafields.accentuate.event_type.toLowerCase() + '"]').length) {
@@ -260,9 +257,9 @@
     })(jQuery);
 </script>
 
+{% assign events_list = blog.metafields.accentuate.featured_events_list | split: "|" %}
 
-{% assign events_list = shop.metafields.accentuate.featured_events_list | split: "|" %}
-{% include 'snippet_featured_events' with events: events_list %} 
+{% include 'snippet_featured_events' with events: events_list %}
 
 
 {% schema %}

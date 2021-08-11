@@ -1,4 +1,4 @@
-<script type="text/javascript" async src="https://edge.personalizer.io/storefront/2.0.0/js/shopify/storefront.min.js?key=ef4hh-u7zej8afn5cn6r4si-ko3cd&shop=beekman1802.myshopify.com"></script>
+<script type="text/javascript" async src="https://edge.personalizer.io/storefront/2.0.0/js/shopify/storefront.min.js?key=rjrpx-v7pjc8rw5y6hc4bqy-tphbl&shop=beekman1802.myshopify.com"></script>
 <script>
 window.LimeSpot = window.LimeSpot === undefined ? {} : LimeSpot;{% assign t = template | prepend: '/' | append: '.' %}
 {% if t contains '/product.' %}LimeSpot.PageInfo = { Type: "Product", ReferenceIdentifier: "{{ product.id }}"};
@@ -7,15 +7,23 @@ window.LimeSpot = window.LimeSpot === undefined ? {} : LimeSpot;{% assign t = te
 {% elsif t contains '/cart.' %}LimeSpot.PageInfo = { Type: "Cart", ReferenceIdentifier: null };
 {% elsif t contains '/search.' %}LimeSpot.PageInfo = { Type: "Search", ReferenceIdentifier: null };
 {% elsif t contains '/404.' %}LimeSpot.PageInfo = { Type: "Four04", ReferenceIdentifier: null };
+{% elsif checkout.id != blank and checkout.order_id == blank %}LimeSpot.PageInfo = { Type: "Checkout", ReferenceIdentifier: null };
 {% endif %}{% if customer %}LimeSpot.UserInfo = { Identifier: "{{ customer.id }}", Email: "{{ customer.email }}", CellPhone: "{{ customer.phone }}", FirstName: "{{ customer.first_name }}", LastName: "{{ customer.last_name }}" };
 {% endif %}
 LimeSpot.StoreInfo = { Theme: "{{ theme.name | escape }}" };
 {% assign cart_product_ids = "" %}
-{% for item in cart.items %}
-	{% assign cart_product_ids = cart_product_ids | append: ',' | append: item.product.id %}
-{% endfor %}
+{% if checkout.id != blank and checkout.order_id == blank %}
+	{% for item in checkout.line_items %}
+		{% assign cart_product_ids = cart_product_ids | append: ',' | append: item.product.id %}
+	{% endfor %}
+{% else %}
+	{% for item in cart.items %}
+		{% assign cart_product_ids = cart_product_ids | append: ',' | append: item.product.id %}
+	{% endfor %}
+{% endif %}
 LimeSpot.CartItems = [{{ cart_product_ids | remove_first: "," }}];
 </script>
 
 
-{% comment %}Checksum: c92f749a53ebe7945d68fef4092be914{% endcomment %}
+
+{% comment %}Checksum: f0e2cc298ec29cced610abf158537a68{% endcomment %}

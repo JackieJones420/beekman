@@ -30,6 +30,13 @@
 
         <div class="col-6 col-md-3 product__wrap">
           <div class="img__wrap">
+            {%- assign additionalClass = '' -%}
+            {% if product.metafields.accentuate.product_label != blank %}
+              {%- assign additionalClass = 'with__label' -%}
+              <div class="product__label">
+                {{ product.metafields.accentuate.product_label }}
+              </div>
+            {% endif %}
             <a href="/products/{{ product.handle }}">
               {% for image in product.images %}
                 {% if featured_image == image %}
@@ -42,7 +49,7 @@
                     wrapper_attributes: "data-product-image-wrapper", %}
                 {% endif %}
               {% endfor %}
-              <div class="gingham-wrap">
+              <div class="gingham-wrap {{ additionalClass }}">
                 {% include 'gingham' %}
               </div>
             </a>

@@ -61,15 +61,29 @@
   {% endif %}
 }
 </script>
+
+<!-- start_review_render_code_widget_section -->
+
+  <div id="pr-reviewdisplay" style=""></div>
+<!-- end_review_render_code_widget_section -->
+
 <!-- start_pwr_initialization_code -->
 
-  <script src="//ui.powerreviews.com/stable/4.0/ui.js"></script>
+  <script src="//ui.powerreviews.com/stable/4.1/ui.js" async></script>
 <!-- end_pwr_initialization_code -->
+
+
 
 <!-- start_review_render_code_js_section -->
 
   <script>
-      POWERREVIEWS.display.render({
+window.pwr = window.pwr || function() {
+  (pwr.q = pwr.q || []).push(arguments);
+}
+</script>
+
+  <script>
+      pwr("render", {
         api_key: "e85b3292-f0e0-41d8-acc2-b7b423889c34",
         locale: "en_US",
         merchant_group_id: "589322278",
@@ -97,8 +111,7 @@
               }{% if forloop.last == false %}, {% endif %} {% endfor %}
           ]},
           components: {
-            ReviewDisplay: "pr-reviewdisplay",
-            ReviewSnippet: "pr-reviewsnippet"
+            ReviewDisplay: "pr-reviewdisplay"
           }
       });
   </script>

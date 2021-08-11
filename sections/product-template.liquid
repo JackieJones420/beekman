@@ -113,6 +113,16 @@
       <div class="product-single__meta">
 
         <h1 class="product-single__title">{{ product.title }}</h1>
+<!-- start_product_section_review_snippet_section -->
+ <!-- start_product_section_review_snippet_section -->
+
+  <div id="pwr-snippets">
+    <div id="pr-reviewsnippet" style=""></div>
+  </div>
+<!-- end_product_section_review_snippet_section -->
+
+ <!-- end_product_section_review_snippet_section -->
+
 
           <div class="product__price">
             {% include 'product-price', variant: current_variant %}
@@ -166,7 +176,7 @@
             {% if section.settings.show_quantity_selector %}
               <div class="product-form__item product-form__item--quantity">
                 <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
-                <input type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*" data-quantity-input>
+                <input type=“number” id=“Quantity-{{ section.id }}” name=“quantity” value=“1" min=“1” max=“{{ variant.inventory_quantity }}” class=“product-form__input” pattern=“[0-9]*” data-quantity-input>
               </div>
             {% endif %}
 

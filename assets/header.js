@@ -86,12 +86,13 @@ var header = {
     });
      /* close mobile menu if you touch overlay */
      $(document).on('click', '#overlay', function(e) {
+       /*
       e.preventDefault();
       const menuIcon = $('.menu-icon');
       $('.mobile-menu').toggleClass('is-visible');
       $('#overlay').toggleClass('overlay-shown');
       menuIcon.toggleClass('left-slide-close-icon');
-      menuIcon.toggleClass('active');
+      menuIcon.toggleClass('active');*/
     });
   },
   klavioLoader: function() {

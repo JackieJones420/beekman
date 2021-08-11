@@ -1,32 +1,32 @@
-<div class="product-detail" >
+<div class="product-detail">
 
-    {% assign paragraphId1 =  product.id | append: 'details-preview' %}
-    {% assign paragraphId2 =  product.id | append: 'details-description' %}
-    <div  >
-        <div  class="preview ">
+{% assign paragraphId1 = product.id | append: 'details-preview' %}
+{% assign paragraphId2 = product.id | append: 'details-description' %}
+<div >
+
+        <div class="preview">
                 {% assign stripped_description = product.description %}
                 <div id='{{ paragraphId1 }}' >{{ product.description | truncate: 203 }}
                 {% if stripped_description.size > 200 %}
                     <button class="view__more"
-                        onclick="addclass();"
+                       onclick="addclass();"
                     >
                         Read More
                     </button>
                 {% endif %}
-                </div>
+        </div>
         </div>
         <div id='{{ paragraphId2 }}' class="hidden">
-            {{ product.description }}
+        {{ product.description }}
         
         <button id='{{ paragraphId2 }}' class=""
-                onclick="removeclass();"
+        onclick="removeclass();"
         >
             Read Less
         </button>
-        </div>
     </div>
 </div>
-
+</div>
 <script>
 function addclass(){
 document.getElementById('{{ paragraphId1 }}').classList.add('show');

@@ -7,8 +7,12 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
 
 var gMM = jQuery.noConflict(!0);
 MenuApp.init = function(){
-    MenuApp.desktopview = 767;
-    MenuApp.menuLisHTML=gMM("#globo-hidden-menu").html(),MenuApp.menuHTML=MenuApp.mobileBtn+'<ul class="'+MenuApp.menuClass+'">'+MenuApp.menuLisHTML+"</ul>";
+    MenuApp.desktopview = 840;
+    var pattern = "gmtg", re = new RegExp(pattern, "g");
+    var pattern2 = "gm-it", re2 = new RegExp(pattern2, "g");
+    var pattern3 = "gm-sm", re3 = new RegExp(pattern3, "g");
+    var pattern4 = "gm-tcp", re4 = new RegExp(pattern4, "g");
+    MenuApp.menuLisHTML=gMM("#globo-hidden-menu").html().replace(re, "globomenu-target").replace(re2, "globomenu-item").replace(re3, "globomenu-submenu").replace(re4, "globomenu-tab-content-panel"),MenuApp.menuHTML=MenuApp.mobileBtn+'<ul class="'+MenuApp.menuClass+'">'+MenuApp.menuLisHTML+"</ul>";
     gMM(document).ready(function(){
                 var installed=!1;gMM("script").each(function(){-1!=gMM(this).text().indexOf("globomenu_init.js?")&&-1!=gMM(this).text().indexOf("asyncLoad")&&-1==gMM(this).text().indexOf("initSchema")&&(installed=!0)});
         if(!installed) return;
@@ -16,7 +20,40 @@ MenuApp.init = function(){
         gMM('.globomenu-replace-menu').addClass(MenuApp.menuClass).html( MenuApp.menuLisHTML );
         if( MenuApp.menu != 'no-menu'){
             var appMainMenu=MenuApp.linkLists[MenuApp.menu].items;gMM("body").addClass("theme-store-id-"+MenuApp.themeId);
-                                        gMM('#MobileNav, ul#SiteNav').addClass(MenuApp.menuClass).html(MenuApp.menuLisHTML);
+                                        gMM("ul,nav").each(function(){
+                    if( gMM(this).prop("tagName") == 'UL' || ( gMM(this).prop("tagName") == 'NAV' && gMM(this).find('ul').length == 0 )){
+                        var forceMenu = true;
+
+                        if( gMM(this).children("li").length < appMainMenu.length && gMM(this).children("li").length > 1 )
+                            var forceMenu = false;
+                        if(MenuApp.linkLists[MenuApp.menu].names != undefined){
+                            var menuAllText = gMM(this).text().toLowerCase();
+                            gMM.each(MenuApp.linkLists[MenuApp.menu].names, function(menuindex, menutext){
+                                if(menuAllText.indexOf(menutext.toLowerCase()) == -1){
+                                    forceMenu = false;
+                                    return false;
+                                }
+                            });
+                        }
+
+                        if(!forceMenu)
+                            return;
+
+                        var li_index_real=0;gMM(this).children("li").each(function(a,n){if(li_index_real<=appMainMenu.length-1){var i=gMM(this);if(!i.hasClass("site-nav--compress__menu")&&!i.find(".search").length&&"coin-container"!=i.attr("id"))if(i.hasClass("mobile-nav__item--sub")||i.hasClass("accordion-toggle")||i.hasClass("dropdown")&&i.find("a").first().hasClass("dropdown-toggle")||i.hasClass("site-nav--has-dropdown")||i.hasClass("site-nav--has-submenu")||i.find("a").first().hasClass("mobile-nav__toggle")||i.find(".mobile-nav__has-sublist").length)li_index_real++;else{var s=i.find("a").first().attr("href");if((null==s||null!=s&&("#"==s.substr(0,1)||""==s))&&0<i.find("a:nth-child(2)").length?s=i.find("a:nth-child(2)").attr("href"):(null==s||null!=s&&("#"==s.substr(0,1)||""==s))&&0<i.find("a > a").length&&(s=i.find("a > a").attr("href")),null==s)return forceMenu=!1;if(appMainMenu[li_index_real]!=s)return forceMenu=!1;i.addClass("globo-replace-item"),li_index_real++}}});
+
+                        if(!forceMenu)
+                            return;
+                        if(MenuApp.themeId == 688 && gMM(this).parent().attr('id') == 'nav')
+                            return;
+                        if(MenuApp.themeId == 714 && gMM(this).hasClass('header__mobile-tabs'))
+                            return;
+                                                    /*if(801!=MenuApp.themeId&&gMM(this).width()<480)var is_narrow=!0;*/
+                            gMM(this).addClass(MenuApp.menuClass).html( MenuApp.menuLisHTML );
+                            /*gMM(this).width()<480&&gMM(this).hasClass("globomenu-horizontal")&&801!=MenuApp.themeId&&826!=MenuApp.themeId&&(is_narrow?gMM(this).removeClass("globomenu-trigger-hover").addClass("globomenu-trigger-click globomenu-narrow"):gMM(this).addClass("globomenu-trigger-hover").removeClass("globomenu-trigger-click globomenu-narrow"));*/
+                            gMM(MenuApp.mobileBtn).insertBefore( gMM(this) );
+                                                            gMM('.mobile-nav').addClass('globomenu-narrow');
+                                                                        }
+                });
                         gMM('.globomenu a').attr('data-no-instant', true).addClass('js-no-transition');
             var myInterval = setInterval(function(){
             if(gMM('#nav .mm-listview').length){

@@ -73,6 +73,11 @@
                 <div class="col-6 col-md-4 col-lg-3 text-center">
                   <a href="{{ product_related.url | within: collection }}">
                     <div class="img-bg">
+                      {% if product_related.metafields.accentuate.product_label != blank %}
+                        <div class="product__label">
+                          {{ product_related.metafields.accentuate.product_label }}
+                        </div>
+                      {% endif %}
                       {% unless product_related.featured_image == blank %}
                         {% include 'responsive-image-aspect-ratio' with
                           image: product_related.featured_image,
@@ -124,6 +129,11 @@
                       <div class="col-6 col-md-4 col-lg-3 text-center">
                         <a href="{{ product.url | within: collection }}">
                           <div class="img-bg">
+                            {% if product.metafields.accentuate.product_label != blank %}
+                              <div class="product__label">
+                                {{ product.metafields.accentuate.product_label }}
+                              </div>
+                            {% endif %}
                             {% unless product.featured_image == blank %}
                               {% include 'responsive-image-aspect-ratio' with
                                 image: product.featured_image,
