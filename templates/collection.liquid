@@ -1,6 +1,10 @@
 <div class="category-landing-content collection__wrap">
     <div class="container">
         <div class="row collection-featured-image__wrap">
+            {%for product in collection.products%}
+       {%- assign current_variant = product.selected_or_first_available_variant -%}
+       <input type="hidden" id="selected_or_first_available_variant_{{product.handle}}" value="{{current_variant.available}}"/>
+               {%endfor%}
             <div class="col-12 collection__main-image">
                 {% include 'responsive-image' with
                     image: collection.image.src,
