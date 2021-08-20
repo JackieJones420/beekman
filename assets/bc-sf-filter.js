@@ -299,11 +299,15 @@ function buildBuyBtn(data, url, isSub) {
         }, this));
   }
 
-  return (data.available ? '<button type="submit" name="add" class="add__to" id="buyBtn'+ data.id +'" data-add-to-cart>' +
+  if($('#selected_or_first_available_variant_'+data.handle).val()==="true")
+ return '<button type="submit" name="add" class="add__to" id="buyBtn'+ data.selected_or_first_available_variant.id +'" data-add-to-cart>' +
     '<span data-add-to-cart-text>' +
       'Add To Cart' +
     '</span>' +
-    '</button>' : '<span class="sold_out_product">' + soldOutLabel + '</span>');
+    '</button>';
+    else
+    return '<span class="sold_out_product">' + soldOutLabel + '</span>';
+
 }
 function buildVariantsCount(data) {
   if ((data.variants.length > 1)) {
